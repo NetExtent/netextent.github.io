@@ -1,15 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>NetExtent</title>
+    <title>JavaScript OCR Test</title>
 
     <meta name="Description" content="Optical Character Recognition demo in JavaScript"/>
-    <meta property="og:image" content="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
-    <link rel="image_src" href="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
-
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/jquery.Jcrop.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -18,26 +16,30 @@
 <body class="step1">
 
 <div class="container">
-    <div class="alert alert-danger"><strong>Oops!</strong> <span></span></div>
+    <div class="alert alert-danger"><strong>Oh there seems to be an issue!</strong> <span></span></div>
     <div class="jumbotron">
         <div id="step1">
+            <h1><i class="glyphicon glyphicon-camera"></i></h1>
 
             <p class="lead">
-                Take a clear picture of the business card.
-
+                Take a clear picture of your business card .
+                <i class="glyphicon glyphicon-question-sign help" data-placement="bottom"
+                   data-content="img src='img/step1.png'" data-html="true"></i>
             </p>
 
             <figure class="not-ready">
                 <video autoplay></video>
             </figure>
 
-            <button class="btn btn-lg btn-success" disabled id="takePicture">Take a picture</button>
+            <button class="btn btn-lg btn-success" disabled id="takePicture"> Click a picture</button>
         </div>
         <div id="step2">
             <h1><i class="glyphicon glyphicon-pencil"></i></h1>
 
             <p class="lead">
                 Crop the picture and adjust it so that text is clearly visible.
+                <i class="glyphicon glyphicon-question-sign help" data-placement="bottom"
+                   data-content="img src='img/step2.png'" data-html="true"></i>
             </p>
 
             <figure>
@@ -54,7 +56,7 @@
         <div id="step3">
             <h1><i class="glyphicon glyphicon-text-height"></i></h1>
 
-            <p class="lead">You'll find the recognized text below.</p>
+            <p class="lead"></p>
 
             <figure>
                 <canvas></canvas>
@@ -70,10 +72,23 @@
         </div>
     </div>
 
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#" data-step="1">#1 <i class="glyphicon glyphicon-camera"></i></a></li>
+            <li class="disabled"><a href="#" data-step="2">#2 <i class="glyphicon glyphicon-pencil"></i></a></li>
+            <li class="disabled"><a href="#" data-step="3">#3 <i class="glyphicon glyphicon-text-height"></i></a></li>
+        </ul>
+        <h3 class="text-muted">JavaScript OCR Test</h3>
+    </div>
 
+    <div class="row marketing">
+        <div class="col-lg-6">
+                    </div>
 
-
-
+        <div class="col-lg-6">
+        
+        </div>
+    </div>
 
 </div>
 <!-- /container -->
@@ -82,38 +97,8 @@
 <script src="js/vendor/modernizr.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/jquery.Jcrop.js"></script>
-<script src="js/vendor/ocrad.min.js"></script>
+<script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js"></script>
 <script src="js/vendor/glfx.min.js"></script>
-
 <script src="js/main.js"></script>
 
-<!-- Social -->
-<script>!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + '://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, 'script', 'twitter-wjs');</script>
-<script type="text/javascript">
-    (function () {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://apis.google.com/js/platform.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-    })();
-</script>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-</body>
-</html>
+
