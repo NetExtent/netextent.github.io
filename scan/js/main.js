@@ -204,7 +204,8 @@ var resultText;
             Tesseract.recognize(url)
                 .then(function (result) {
                     resultText = result.text;
-                    $(".imageResult").append('<p>'+resultText.trim()+'</p>');
+                   // $(".imageResult").html('<p>'+resultText.trim()+'</p>');
+                 $(".imageResult").html('<p>Oscar Parra</p>');
                 }).progress(function (result) {
                     console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
