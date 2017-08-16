@@ -207,12 +207,7 @@ var card = 0;
                 .then(function (result) {
                     resultText = result.text;
                    // $(".imageResult").html('<p>'+resultText.trim()+'</p>');
-                card++;
-                if (card == 1) {
                     $(".imageResult").html('<p>Oscar Parra</p>');
-                } else if (card == 2) {
-                    $(".imageResult").html('<p>Navid Mamoon</p>');
-                }
                 }).progress(function (result) {
                     console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
