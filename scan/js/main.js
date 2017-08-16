@@ -146,9 +146,9 @@ var resultText;
         //modify the picture using glfx.js filters
         texture = fxCanvas.texture(canvas);
         fxCanvas.draw(texture)
-             .hueSaturation(0.5 ,0)//grayscale
-             .unsharpMask(20, 2)
-             .brightnessContrast(0.2, 0.9)
+             .hueSaturation(0,0)//grayscale
+            //.unsharpMask(20, 2)
+           //  .brightnessContrast(0.2, 0.9)
              .update();
 
         window.texture = texture;
@@ -204,9 +204,9 @@ var resultText;
             Tesseract.recognize(url)
                 .then(function (result) {
                     resultText = result.text;
-                    $(".imageResult").append('<p>'+resultText.trim()+'</p>');
+                    console.log(resultText.trim());
                 }).progress(function (result) {
-                    //console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
+                    console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
         }
     }
@@ -242,8 +242,8 @@ var resultText;
         var img = document.querySelector('#step2 img');
 
         fxCanvas.draw(texture)
-            //.hueSaturation(0.5,0)
-            .unsharpMask(20, 2)
+            .hueSaturation(0,0)
+            .unsharpMask(5, 2)
             .brightnessContrast(brightness, contrast)
             .update();
 
