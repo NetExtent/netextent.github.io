@@ -1,8 +1,18 @@
  /* Space out content a bit */
+#slogan{
+    text-align: center;
+    font-size: 22px;
+}
+
+.container {
+    margin-top: 20px;
+}
+/* Space out content a bit */
  body {
-     background-image: url("../NetExtent.jpg");
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background: linear-gradient(white, lightblue);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
 } 
 
  /*Everything but the jumbotron gets side spacing for mobile first views */
@@ -25,13 +35,6 @@
     line-height: 40px;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
 /* Customize container */
 @media (min-width: 768px) {
     .container {
@@ -44,6 +47,7 @@
 
 /* Main marketing message and sign up button */
 .jumbotron {
+    background: rgba(0, 0, 0, 0.03);
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -131,11 +135,29 @@ body.step3 #step1, body.step3 #step2 {
     position: relative;
 }
 
-#step1 figure.not-ready:after {
-    content: 'Please enable the camera.';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -85px;
-    margin-top: -10px;
+.alert {
+    margin-top: 15px;
+    font-size: 16px;
 }
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    margin-top: 30px;
+    width: 400px;
+    border: 5px solid #eee;
+    border-radius: 10px;
+}
+
+#takePicture,
+#go-back,
+#start-over{
+    background-color: black;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+} 
