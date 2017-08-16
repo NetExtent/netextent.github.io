@@ -204,7 +204,7 @@ var resultText;
             Tesseract.recognize(url)
                 .then(function (result) {
                     resultText = result.text;
-                    $("body").append('<p>'+resultText.trim()+'</p>');
+                    $(".imageResult").append('<p>'+resultText.trim()+'</p>');
                 }).progress(function (result) {
                     //console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
