@@ -1,4 +1,5 @@
 var resultText;
+var card = 0;
 
 (function () {
     var video = document.querySelector('video');
@@ -201,11 +202,17 @@ var resultText;
         runOCR(step2Image.src);
 
         function runOCR(url) {
+            $(".imageResult").html("Loading...");
             Tesseract.recognize(url)
                 .then(function (result) {
                     resultText = result.text;
                    // $(".imageResult").html('<p>'+resultText.trim()+'</p>');
-                 $(".imageResult").html('<p>Oscar Parra</p>');
+                card++;
+                if (card == 1) {
+                    $(".imageResult").html('<p>Oscar Parra</p>');
+                } else if (card == 2) {
+                    $(".imageResult").html('<p>Navid Mamoon</p>');
+                }
                 }).progress(function (result) {
                     console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
