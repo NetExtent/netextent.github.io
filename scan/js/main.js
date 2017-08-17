@@ -206,8 +206,7 @@ var card = 0;
             Tesseract.recognize(url)
                 .then(function (result) {
                     resultText = result.text;
-                   //$(".imageResult").html('<p>'+resultText.trim()+'</p>');
-                   $(".imageResult").html('<p>Oscar Parra</p>');
+                   $(".imageResult").html('<p>'+resultText.trim()+'</p>');
                 }).progress(function (result) {
                     console.log(result["status"] + " (" + (result["progress"] * 100) + "%)");
                 });
